@@ -10,5 +10,5 @@ Here.</a></p>
 
 The program is built in such a way that each process is independent of each other, in other words, no process affects the operation of the other. This means that a multiprogramming environment was achieved.
 
-<p>You can use the arduino code freely and without limitations. If you want to see the code go <a href="https://github.com/DavidSantana872/Filament_Extruder/tree/main/Code" title="Code">
+<p>You can use the arduino code freely and without limitations. If you want to see the code go <a href="https://github.com/DavidSantana872/Filament_Extruder/blob/main/Code/main.ino" title="Code">
 Here.</a></p>
