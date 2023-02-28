@@ -8,7 +8,7 @@ You can use this repository to replicate the project or have a reference of how 
 <p>In this repository you can find the circuit diagram and use it freely like a guide of your projects. You can see the diagram circuit <a href="https://github.com/DavidSantana872/Filament_Extruder/blob/main/Circuit_Diagram/Schematic_FilamentProject_2023-02-26.pdf" title="Circuit_Diagram">
 Here.</a></p>
 
-<p>Also if you want to see all the logic and the processes that the extruder realizes you can find all the program and use it freely. If you want to see the code go <a href="https://github.com/DavidSantana872/Filament_Extruder/blob/main/Code/main.ino" title="Code">
+<p>Also if you want to see all the logic and the processes that the extruder realizes you can find the full program and use it freely <a href="https://github.com/DavidSantana872/Filament_Extruder/blob/main/Code/main.ino" title="Code">
 Here.</a></p>
 
 <p>If you want to introduce more depth in the project you can check all the documentation from the beginning to the end of this project. If you want to see the full documentation go <a href="https://github.com/DavidSantana872/Filament_Extruder/blob/main/Code/main.ino" title="Documentation">
