@@ -1,6 +1,7 @@
 <h1>Recyclable Filament Extruder</h1>
 
 <img src="https://user-images.githubusercontent.com/101992463/221448465-b78ce6a4-7c4e-47a2-9327-569ec5b8c882.png" aling="center">
+
 <p>In this repository, we present the design and development of a PETG filament extruder using recycled plastic bottles. The extruder is designed with a modular approach, using 3D printed parts and easily accessible components, which increases its accessibility and ease of maintenance. The proposed extruder has a user-friendly and intuitive interface, making it easy to use for the end user. It also has a compact and lightweight design, which makes it easy to transport and maintain even in small-scale 3D printing labs.</p>
 
 You can use this repository to replicate the project or have a reference of how to create a similar filament extruder for your projects.
