@@ -12,6 +12,6 @@ Here.</a></p>
 <p>Also if you want to see all the logic and the processes that the extruder realizes you can find the full program and use it freely <a href="https://github.com/DavidSantana872/Filament_Extruder/blob/main/Code/main.ino" title="Code">
 Here.</a></p>
 
-<p>If you want to introduce more depth in the project you can check all the documentation from the beginning to the end of this project. If you want to see the full documentation go <a href="https://github.com/DavidSantana872/Filament_Extruder/blob/main/Code/main.ino" title="Documentation">
+<p>If you want to introduce more depth in the project you can check all the documentation from the beginning to the end of this project. If you want to see the full documentation go <a href="https://github.com/DavidSantana872/Filament_Extruder/tree/main/Documentation" title="Documentation">
 Here.</a></p>
 
