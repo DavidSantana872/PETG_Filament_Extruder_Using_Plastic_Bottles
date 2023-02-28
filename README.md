@@ -15,3 +15,20 @@ Here.</a></p>
 <p>If you want to introduce more depth in the project you can check all the documentation from the beginning to the end of this project. If you want to see the full documentation go <a href="https://github.com/DavidSantana872/Filament_Extruder/tree/main/Documentation" title="Documentation">
 Here.</a></p>
 
+<h2>The materials used were:</h2> 
+
+- Arduino nano. 
+- A thermistor to calculate the temperature.
+- A LCD 16x2 to show the extruder´s information and visualize other parameters. 
+- A resistance of 12V, 40W to heating the block. 
+- A IRF3205 to control the PWM signal to the resistence. 
+- A keypad that is used to navigate into the extruder´s interface.
+- A ATX power supply with 12V, 5V and 3.3V Outputs.
+- A L293D to controlate the ON and OFF to the fans.
+- Two 80mm PC fans to refrigerate the filament and the hardware.
+- A Potentiometer to control the speed of the stepper motor.
+- An A4988 driver to control the pulse and the direction of the stepper motor.
+- A stepper motor.
+- Two leds one red and the other one green to indicate if the system is working or not.
+- A switch to disconnect completely the power supply.
+
