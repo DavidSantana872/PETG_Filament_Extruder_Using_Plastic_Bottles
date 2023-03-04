@@ -21,9 +21,9 @@ Here.</a></p>
 - A thermistor to calculate the temperature.
 - A LCD 16x2 to show the extruder´s information and visualize other parameters. 
 - A resistance of 12V, 40W to heating the block. 
-- A IRF3205 to control the PWM signal to the resistence. 
+- An IRF3205 to control the PWM signal to the resistence. 
 - A keypad that is used to navigate into the extruder´s interface.
-- A ATX power supply with 12V, 5V and 3.3V Outputs.
+- An ATX power supply with 12V, 5V and 3.3V Outputs.
 - A L293D to controlate the ON and OFF to the fans.
 - Two 80mm PC fans to refrigerate the filament and the hardware.
 - A Potentiometer to control the speed of the stepper motor.
