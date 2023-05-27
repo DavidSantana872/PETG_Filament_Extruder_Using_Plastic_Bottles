@@ -6,12 +6,12 @@
  *         Daniel Centeno
  *         David Santana
  * 
- * Version: 1.1.2
+ * Version: 1.1.3
  *
  * Pin used:
  *
  * KeyPad Pines:
- *    for rows =  13, 12, 11, 10
+ *    for rows =  4, 12, 11, 10
  *    for column = 9, 8, 7, 6
  *
  * LCD 16x2 with I2C communication model pines:
@@ -71,7 +71,7 @@ int line = 1;
 char TECLA;
 boolean state = false;
 
-byte pin_rows[row_num] = {13, 12, 11, 10};
+byte pin_rows[row_num] = {4, 12, 11, 10};
 byte pin_column[column_num] = {9, 8, 7, 6};
 Keypad teclado = Keypad(makeKeymap(keys), pin_rows, pin_column, 4, 4);
 
@@ -280,40 +280,42 @@ void function_information(){
     }
 }
 
-void function_edit(){
-    int i = 0;
-    char valor_char[16];
-    while(1){
-            TECLA = teclado.getKey();
-            lcd.setCursor(0,0);
-            lcd.print("Temperature:");
-            if (isdigit(TECLA) && i < 15 || TECLA == '.'){
-                valor_char[i] = TECLA;
-                lcd.setCursor(i, 1);
-                lcd.print(valor_char[i]);
-                i = i + 1;
-            }
-            if(TECLA == '#'){
-                lcd.clear();
-                set_temperature = atof(valor_char);
-                memset(valor_char, ' ', 16);
-                break;
-            }
-            if(TECLA == 'D'){
-                lcd.clear();
-                memset(valor_char, ' ', 16);
-                break;
-            }
-
-        start_Off();    
+void function_edit() {
+  String valor_char;
+  while (1) {
+    TECLA = teclado.getKey();
+    lcd.setCursor(0, 0);
+    lcd.print("Temperature:");
+    if (isdigit(TECLA) && valor_char.length() < 15 || TECLA == '.') {
+      valor_char += TECLA;
+      lcd.setCursor(0, 1);
+      lcd.print(valor_char);
+     
     }
-}
 
+    if (TECLA == '#') {
+      lcd.clear();
+      set_temperature = valor_char.toFloat();
+      valor_char = "";
+      break;
+    }
+
+    if (TECLA == 'D') {
+      lcd.clear();
+      set_temperature = set_temperature;
+      valor_char = "";
+      break;
+    }
+
+    start_Off();
+  }
+}
 void start_Off(){
 
   //Lecture of the pot to set the velocity of the motor
   int potVal = analogRead(potPin);
-  motorSpeed = map(potVal, 0, 1023, 0, 1000);
+  // update value 0 - 860 not use 0 - 1023
+  motorSpeed = map(potVal, 0, 860, 0, 1000);
   stepper.setSpeed(motorSpeed);
   stepper.runSpeed();
 
