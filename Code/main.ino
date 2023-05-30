@@ -10,10 +10,10 @@
  *
  * Pin used:
  *
- * KeyPad Pines:
- *    for rows =  4, 12, 11, 10
+ * KeyPad Pines :
+ *    for rows = 4, 12, 11, 10
  *    for column = 9, 8, 7, 6
- *
+ *    
  * LCD 16x2 with I2C communication model pines:
  *    for SDA = A4
  *    for SCL = A5
@@ -314,8 +314,8 @@ void start_Off(){
 
   //Lecture of the pot to set the velocity of the motor
   int potVal = analogRead(potPin);
-  // update value 0 - 860 not use 0 - 1023
-  motorSpeed = map(potVal, 0, 860, 0, 1000);
+
+  motorSpeed = map(potVal, 0, 1023, 0, 1000);
   stepper.setSpeed(motorSpeed);
   stepper.runSpeed();
 
