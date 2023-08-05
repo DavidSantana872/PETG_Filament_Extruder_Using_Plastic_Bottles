@@ -128,6 +128,9 @@ int LedOff = 0;
 bool flag = true;
 
 //************************************************************************************************************************************
+// CLEAR LCD VAR
+int Variacion_Temperatura = 0;
+int i = 0;
 
 void setup()
 {  
@@ -243,22 +246,16 @@ void function_state(){
 void function_information(){
     
     while(1){
-
-      int amount = floor(log10(MotorSpeedPercentage)) + 1;
-
-      if(amount == 2 && flag == true){
-        flag = false;
-        lcd.clear();
+      // Contar Variaciones de temperatura
+      if(Variacion_Temperatura != temperature){
+        Variacion_Temperatura = temperature;
+        i = i + 1;
       }
-      else if(amount == 1 && flag == false){
-        flag = true;
-        lcd.clear();
-      }
-      else if(amount == 3){
-        flag = true;
-      }
-
-      
+      // Limpiar Display LCD 
+      if(i >= 8){
+          lcd.clear();
+          i = 0;
+        }
       TECLA = teclado.getKey();
       lcd.setCursor(0,0);
       lcd.print("Temp: "); lcd.print(temperature); lcd.print("/"); lcd.print(set_temperature);
@@ -274,12 +271,11 @@ void function_information(){
           lcd.clear();
           break;
       }
-
+   
       start_Off();
 
     }
 }
-
 void function_edit() {
   String valor_char;
   while (1) {
